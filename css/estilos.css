@@ -1,0 +1,460 @@
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+:root {
+    --color-casi-negro: #1d1d1d;
+    --color-azul: #8cb7c9;
+    --color-gris: #f6f6f6;
+    --fuente-sin-serif: Verdana, Tahoma, Arial, sans-serif;
+    --fuente-serif: Georgia, 'Times New Roman', serif;
+}
+
+/* ============================================
+   RESET Y ESTILOS GENERALES
+   ============================================ */
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-sin-serif);
+    color: var(--color-casi-negro);
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+.container {
+    width: 95%;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    text-align: center;
+    padding: 1.25rem 0 0.625rem;
+}
+
+header a img {
+    max-width: 7.5rem;
+}
+
+/* ============================================
+   NAVEGACIÓN PRINCIPAL
+   ============================================ */
+nav {
+    width: 100%;
+    border-top: 2px solid var(--color-azul);
+    border-bottom: 2px solid var(--color-azul);
+    padding: 0.625rem 0;
+}
+
+nav.main-nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 0.9375rem;
+}
+
+nav ul li a {
+    color: var(--color-casi-negro);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--color-azul);
+}
+
+/* Ítem activo de la navegación */
+nav ul li a.active {
+    font-weight: 400;
+}
+
+/* ============================================
+   MAIN
+   ============================================ */
+main {
+    padding: 1.875rem 0;
+    line-height: 1.6;
+}
+
+article {
+    font-size: 1.1rem;
+}
+
+article header {
+    text-align: left;
+}
+
+article header p.lead {
+    max-width: 37.5rem;
+    margin: 1.25rem auto 0;
+    font-size: 1.5rem;
+}
+
+article footer.caption {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-sin-serif);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.7rem;
+
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+/* ============================================
+   ENLACES EXTERNOS
+   ============================================ */
+a[href^="http"],
+a[href^="https"] {
+    color: var(--color-casi-negro);
+    text-decoration: underline;
+}
+
+a[href^="http"]::after,
+a[href^="https"]::after {
+    content: '';
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-left: 0.0625rem;
+    background-image: url('../img/external-link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+a[href^="http"]:hover,
+a[href^="https"]:hover {
+    color: var(--color-azul);
+}
+
+a[href^="http"]:hover::after,
+a[href^="https"]:hover::after {
+    background-image: url('../img/external-link-modif.svg');
+}
+
+/* ============================================
+   CITAS
+   ============================================ */
+
+/* Cita de bloque (blockquote) */
+blockquote {
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+blockquote .quote_content {
+    font-family: var(--fuente-serif);
+    font-weight: 700;
+    font-size: 1.40rem;
+    border-left: 4px solid var(--color-azul);
+    margin: 1.25rem;
+    padding: 0 2.5rem 0 1.25rem;
+}
+
+blockquote footer {
+    font-family: var(--fuente-serif);
+    margin: 0 1.25rem;
+    padding: 0 1.25rem;
+
+}
+
+/* Citas de línea (q) */
+q {
+    font-family: var(--fuente-serif);
+    font-weight: 700;
+}
+
+cite.creation {
+    font-weight: 700;
+    font-family: var(--fuente-serif);
+}
+
+/* ============================================
+   ABREVIATURAS
+   ============================================ */
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+/* ============================================
+   ICONO DE RELOJ (index.html - tiempo de lectura)
+   ============================================ */
+.reading-time {
+    font-size: 0.85rem;
+    color: var(--color-casi-negro);
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+    margin: 0.3125rem 0 0.9375rem;
+}
+
+.reading-time::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../img/icon-clock.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/* ============================================
+   IMAGEN PRINCIPAL DEL ARTÍCULO
+   ============================================ */
+.article-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.25rem 0 0.625rem;
+}
+
+/* ============================================
+   VÍDEO DE YOUTUBE
+   ============================================ */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 1.25rem 0 0.3125rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+
+}
+
+/* ============================================
+   IMÁGENES ODS
+   ============================================ */
+.ods-images {
+    display: flex;
+    gap: 0.625rem;
+    margin: 0.9375rem 0;
+}
+
+.ods-images img {
+    flex: 1;
+    max-width: 7.5rem;
+}
+
+/* ============================================
+   FUENTE DEL ARTÍCULO
+   ============================================ */
+.article-source {
+    font-size: 0.85rem;
+    margin-top: 0.625rem;
+}
+
+/* ============================================
+   LISTAS ANIDADAS - clima-urbano.html
+   ============================================ */
+
+/* Nivel 1 */
+ul.estrategias {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+ul.estrategias>li {
+    list-style-type: square;
+    margin-bottom: 2rem;
+    color: var(--color-azul);
+
+}
+
+ul.estrategias>li span {
+    color: var(--color-casi-negro);
+    font-size: 1.35rem;
+}
+
+/* Nivel 2 */
+ul.estrategias>li>ul {
+    list-style: none;
+    padding-left: 1.25rem;
+}
+
+ul.estrategias>li>ul>li {
+    list-style-type: disc;
+    color: var(--color-azul);
+    margin-bottom: 0.25rem;
+
+}
+
+ul.estrategias>li>ul>li span {
+    color: var(--color-casi-negro);
+    font-size: 1.25rem;
+}
+
+/* Nivel 3 */
+ul.estrategias>li>ul>li>ul {
+    list-style: none;
+    padding-left: 1.25rem;
+}
+
+ul.estrategias>li>ul>li>ul>li {
+    list-style-type: circle;
+    color: var(--color-azul);
+    margin-bottom: 0.25rem;
+}
+
+ul.estrategias>li>ul>li>ul>li span {
+    color: var(--color-casi-negro);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   ÍNDICE DE CONCEPTOS - conceptos.html
+   ============================================ */
+.indice-conceptos {
+    width: 100%;
+    border: 1px solid var(--color-azul);
+    padding: 1.25rem 1.56rem;
+    margin: 1.25rem 0 2.5rem;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.indice-conceptos h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    margin-bottom: 0.9375rem;
+    font-family: var(--fuente-sin-serif);
+}
+
+.indice-conceptos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.indice-conceptos ul li {
+    border-bottom: 1px solid var(--color-azul);
+    padding: 0.375rem 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.indice-conceptos ul li:last-child {
+    border-bottom: none;
+}
+
+.indice-conceptos ul li a {
+    color: var(--color-casi-negro);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.indice-conceptos ul li a:hover {
+    color: var(--color-azul);
+}
+
+/* Evitar icono externo en los enlaces internos del índice */
+.indice-conceptos ul li a::after {
+    display: none;
+}
+
+/* ============================================
+   LISTA DE DESCRIPCIÓN - conceptos.html
+   ============================================ */
+dl.glosario {
+    margin: 0;
+    padding: 0;
+}
+
+dl.glosario dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1.875rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+dl.glosario dt::before {
+    content: '';
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem;
+    background-image: url('../img/icon-asterisk.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    color: var(--color-azul);
+}
+
+dl.glosario dd {
+    margin: 0 5rem 0.625rem 4rem;
+
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer.main-footer {
+    width: 100%;
+    background-color: var(--color-gris);
+    text-align: center;
+    padding: 1.25rem 0;
+    font-size: 0.85rem;
+    margin-top: 2.5rem;
+    box-sizing: border-box;
+}
+
+footer.main-footer p {
+    margin: 0.25rem 0;
+}
+
+footer.main-footer strong {
+    font-weight: 700;
+}
